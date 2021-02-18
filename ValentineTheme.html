@@ -37,11 +37,10 @@
     
       #viewDiv{
         position: absolute;
-        top:50%;
         left:50%;
         transform: translate(-50%, -50%);
         padding: 10px;
-        margin-top: 120px;
+        margin-top: 160px;
         width: 25%;
         height: 40%;
         margin: auto;
@@ -54,6 +53,7 @@
     <script src="https://js.arcgis.com/4.18/"></script>
 
     <!-- to load the Map and MapView module-->
+    <!--https://developers.arcgis.com/javascript/latest/add-a-point-line-and-polygon/-->
     <script>
         require([
             "esri/config",
@@ -73,7 +73,7 @@
             const view = new MapView({
              map: map,
             center: [15.383492054344085, 43.978306123742975], // Longitude, latitude
-            zoom: 14, // Zoom level
+            zoom: 15, // Zoom level
             container: "viewDiv" // Div element
             });
 
@@ -111,7 +111,7 @@
             attributes: attributes,
             popupTemplate: popupTemplate
             });
-            
+
             graphicsLayer.add(pointGraphic);
             
             // Create a polygon geometry
@@ -333,7 +333,7 @@
   <body>
     <h1> My Valentine Present for YOU  &#128157; </h1>
     <h3> Please click the blue marker on the map to see my message! </h3>
-    <div id="present"><figure><img src="images/present.jpg" alt="present" width="900" height="600"></figure></div>
+    <div id="present"><figure><img src="images/present.jpg" alt="present" width="200%" height="200%"></figure></div>
     <div id="viewDiv"></div>
   </body>
 </html>
