@@ -27,7 +27,6 @@
             "esri/views/MapView",
             "esri/Graphic",
             "esri/layers/GraphicsLayer"
- 
 
         ], function (esriConfig,Map, MapView, Graphic, GraphicsLayer) {
 
@@ -43,6 +42,9 @@
             zoom: 16, // Zoom level
             container: "viewDiv" // Div element
             });
+            
+            const graphicsLayer = new GraphicsLayer();
+            map.add(graphicsLayer);
 
             const point = { //Create a point
             type: "point",
