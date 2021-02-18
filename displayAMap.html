@@ -4,6 +4,7 @@
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
     <title>ArcGIS API for JavaScript Tutorials: Display a map</title>
 
+    <!-- The viewDiv is the element displays the map and its CSS resets any browser settings -->
     <style>
       html,
       body,
@@ -14,6 +15,28 @@
         width: 100%;
       }
     </style>
+    <!-- Add references to the eCSS file and JS library -->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
+    <script src="https://js.arcgis.com/4.18/"></script>
+
+    <!-- to load the Map and MapView module-->
+    <script>
+        require(["esri/config","esri/Map", "esri/views/MapView"], function (esriConfig,Map, MapView) {
+
+            esriConfig.apiKey = "AAPK6a7fbbd47cc543beb5dd6f9dca65c788i4dAOKVZEHmUy1heCU7lV7w1AVMdIaV7oMkMvfEwTAmxqpzRDBzcxSvGImZHSQ6u";
+
+            const map = new Map({
+            basemap: "arcgis-topographic" // Basemap layer service
+            });
+            const view = new MapView({
+             map: map,
+            center: [-118.805, 34.027], // Longitude, latitude
+            zoom: 13, // Zoom level
+            container: "viewDiv" // Div element
+            });
+  
+        });
+      </script>
 
   </head>
   <body>
