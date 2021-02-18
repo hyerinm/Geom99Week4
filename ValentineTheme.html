@@ -54,7 +54,7 @@
 
             const simpleMarkerSymbol = {
             type: "simple-marker",
-            color: [255, 204, 229],  // Baby Pink
+            color: [0, 204, 204],  // Baby blue
             outline: {
             color: [255, 255, 255], // White
             width: 1
@@ -79,10 +79,10 @@
             });
             graphicsLayer.add(pointGraphic);
             
-            // Create a line geometry
-            const polyline = {
-            type: "polyline",
-            paths: [
+            // Create a polygon geometry
+            const polygon = {
+            type: "polygon",
+            rings: [
             [
             15.383176803588865,
             43.97928994910993
@@ -278,16 +278,13 @@
             ]
             };
             const simpleLineSymbol = {
-            type: "simple-line",
-            color: [226, 119, 40], // Orange
-            width: 1
+            type: "simple-fill",
+            color: [255, 204, 229, 0.5], // Baby pink with 50 percent transcparency
+            outline: {
+                color: [255, 255, 255],
+                width: 2
+            }
             };
-            const polylineGraphic = new Graphic({
-            geometry: polyline,
-            symbol: simpleLineSymbol
-            });
-            graphicsLayer.add(polylineGraphic);
- 
         });
       </script>
 
