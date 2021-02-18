@@ -9,9 +9,14 @@ https://fleming.maps.arcgis.com/home/item.html?id=01a1396b6087441e94bbb99760fa17
 
 https://hyerinm.github.io/Geom99Week4/displayAMap.html
 
-### Find where you locate!
+### Find where you locate:
 https://hyerinm.github.io/Geom99Week4/displayYourLocation.html
 
+### Display a Pop-up:
+https://hyerinm.github.io/Geom99Week4/displayAPopUp.html
+
+### Valentine Theme Map: Boat tour with me
+https://hyerinm.github.io/Geom99Week4/ValentineTheme.html 
 
 <pre>
 <code>
