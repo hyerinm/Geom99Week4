@@ -24,9 +24,8 @@
           margin-top: 40px;
           text-align: center;
         }
-        
-      #viewDiv{
-        position: fixed;
+    #viewDiv{
+        position: relative;
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);
@@ -35,10 +34,10 @@
         width: 35%;
         height: 50%;
         margin: auto;
-        }  
-    
+        }   
+
       #viewDiv:after{
-        position: relative;
+        position: absolute;
         height: 900px;
         width: 900px;
         top:50%;
@@ -75,7 +74,7 @@
              map: map,
             center: [15.383492054344085, 43.978306123742975], // Longitude, latitude
             zoom: 16, // Zoom level
-            container: "viewDiv" // Div element
+            container: "viewDiv:after" // Div element
             });
 
             const graphicsLayer = new GraphicsLayer();
@@ -333,7 +332,7 @@
   <body>
     <h1> My Valentine Present for YOU  &#128157; </h1>
     <h3> Please click the blue marker on the map to see my message! </h3>
-    <div id="viewDiv"></div>
-    <div id="present"><figure><img src="images/present.jpg" alt="present"/></figure></div>
+    <div id="viewDiv:after"></div>
+    <div id="viewDiv"><figure><img src="images/present.jpg" alt="present"/></figure></div>
   </body>
 </html>
