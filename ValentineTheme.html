@@ -45,14 +45,16 @@
         }    
     
       #present{
-        height: 200%;
-        width: 200%;
-        margin-left: auto;
-        margin-right: auto;
-        position: absolute;
-
-      }
-
+        position: fixed;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        margin: 10px;
+        width: 60%;
+        height: 90%;
+        }
+        
     </style>
     <!-- Add references to the eCSS file and JS library -->
     <link rel="stylesheet" href="https://js.arcgis.com/4.18/esri/themes/light/main.css">
@@ -339,7 +341,7 @@
         <h1> My Valentine Present for YOU  &#128157; </h1>
         <h3> Please click the blue marker on the map to see my message! </h3>
         <div id="viewDiv"></div>
-        <div id="present"><figure><img src="images/present.jpg" alt="present"/></figure></div>
     </div>
+    <div id="present"><figure><img src="images/present.jpg" alt="present"/></figure></div>
   </body>
 </html>
