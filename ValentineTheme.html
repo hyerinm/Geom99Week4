@@ -2,7 +2,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-    <title>Boat Rides</title>
+    <title>Boat Rides Galesnjak</title>
 
     <!-- The viewDiv is the element displays the map and its CSS resets any browser settings -->
     <style>
@@ -24,8 +24,10 @@
         require([
             "esri/config",
             "esri/Map", 
-            "esri/views/MapView"
-        ], function (esriConfig,Map, MapView) {
+            "esri/views/MapView", 
+            "esru/layer/FeatureLayer"
+
+        ], function (esriConfig,Map, MapView, FeatureLayer) {
 
             esriConfig.apiKey = "AAPK6a7fbbd47cc543beb5dd6f9dca65c788i4dAOKVZEHmUy1heCU7lV7w1AVMdIaV7oMkMvfEwTAmxqpzRDBzcxSvGImZHSQ6u";
 
@@ -35,9 +37,15 @@
             const view = new MapView({
              map: map,
             center: [15.383492054344085, 43.978306123742975], // Longitude, latitude
-            zoom: 20, // Zoom level
+            zoom: 16, // Zoom level
             container: "viewDiv" // Div element
             });
+
+            // Define a pop-up for galesnjak island
+            const popupisland = {
+            "title": "Galesnjak Island",
+            "content": "The fsurface area of this Island is 132 km^2. That is how much I love you :)"
+            }
   
         });
       </script>
