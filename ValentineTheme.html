@@ -42,7 +42,7 @@
             zoom: 16, // Zoom level
             container: "viewDiv" // Div element
             });
-            
+
             const graphicsLayer = new GraphicsLayer();
             map.add(graphicsLayer);
 
@@ -60,9 +60,21 @@
             width: 1
             }
             };
+            const popupTemplate = {
+            title: "{Name}",
+            content: "{Description}"
+            }
+            const attributes = {
+            Name: "Galesnjak Island",
+            Description: "The area surface of this island is 132km^2. <br> I love you 100000000 times the area surface "
+            }
+
             const pointGraphic = new Graphic({
             geometry: point,
-            symbol: simpleMarkerSymbol
+            symbol: simpleMarkerSymbol,
+
+            attributes: attributes,
+            popupTemplate: popupTemplate
             });
             graphicsLayer.add(pointGraphic);
 
