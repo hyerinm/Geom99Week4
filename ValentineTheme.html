@@ -24,20 +24,8 @@
           margin-top: 40px;
           text-align: center;
         }
-        
-      #viewDiv{
-        position: fixed;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        padding: 10px;
-        margin-top: 80px;
-        width: 35%;
-        height: 50%;
-        margin: auto;
-        }  
-    
-      #present{
+
+        #present{
         position: relative;
         height: 900px;
         width: 900px;
@@ -48,6 +36,19 @@
         margin-top: 60px;
         margin: auto;
       }
+    
+      #viewDiv{
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        padding: 10px;
+        margin-top: 80px;
+        width: 35%;
+        height: 50%;
+        margin: auto;
+        }  
+    
 
     </style>
     <!-- Add references to the eCSS file and JS library -->
@@ -333,7 +334,7 @@
   <body>
     <h1> My Valentine Present for YOU  &#128157; </h1>
     <h3> Please click the blue marker on the map to see my message! </h3>
-    <div id="viewDiv"></div>
     <div id="present"><figure><img src="images/present.jpg" alt="present"/></figure></div>
+    <div id="viewDiv"></div>
   </body>
 </html>
